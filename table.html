@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+    <style>
+        .container {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <table style="border:2px solid red; width:80%" >
+        <thead>
+            <tr>
+                <th>Chemistry</th>
+                <th>Hindi</th>
+                <th>English</th>
+                <th>Math</th>
+                <th>Physics</th>
+                <th>Total mrks</th>
+                <th>Obtained mrks</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+                <th>Remarks</th>
+
+
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td style="width: 200px;"><input id="book" type="text" ></td>
+                <td><input id="book1" type="text"></td>
+                <td><input id="book2" type="text"></td>
+                <td><input id="book3" type="text"></td>
+                <td><input id="book4" type="text"></td>
+                <td>500</td>
+                <td id="book5"></td>
+
+                <td id="per"></td>
+                <td id="book8"></td>
+                <td id="book7"></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <div class="container ">
+        <button onclick="sum()">click me</button>
+
+    </div>
+
+
+    <script>
+
+        function sum() {
+            var a = document.getElementById("book").value
+            var b = document.getElementById("book1").value
+            var c = document.getElementById("book1").value
+            var d = document.getElementById("book1").value
+            var e = document.getElementById("book1").value
+            if (a > 100 && b > 100 && c > 100 && d > 100 && e > 100) {
+                alert("please enter correct value")
+            }
+            else {
+                let obtain = a + b + c + d + e
+
+
+                document.getElementById("book5").innerHTML = obtain
+                console.log(obtain)
+                var per = obtain / 500 * 100
+                document.getElementById("per").innerHTML = per
+                if (a > 40 && b > 40 && c > 40 && d > 40 && e > 40) {
+                    document.getElementById("book7").innerHTML = "Pass"
+
+                }
+                else {
+                    document.getElementById("book7").textContent = "Fail"
+
+                }
+
+                if (obtain>=80) {
+                    document.getElementById("book8").textContent= "A"
+
+                }
+                else if (obtain>=70) {
+                    document.getElementById("book8").textContent= "B" 
+
+                }
+                else if (obtain>=60) {
+                    document.getElementById("book8").textContent= "C"
+
+                }
+                else if (obtain>=50) {
+                    document.getElementById("book8").textContent= "D"
+
+                }
+                else if (obtain>=40) {
+                    document.getElementById("book8").textContent= "E"
+
+                }
+                else{
+                    document.getElementById("book8").textContent= "F"
+
+                }
+                
+                
+
+            }
+        }
+    </script>
+</body>
+
+</html>

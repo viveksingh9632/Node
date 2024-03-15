@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: auto;
+            width: 20%;
+            padding: 10px;
+
+        }
+        button{
+    display: inline-block;
+    padding: 10px;
+        }
+        ul{
+            list-style: none;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: -40px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+<button>Get Duplicates</button>
+<ul>
+</ul>
+</div>
+
+
+<script>
+
+
+     let users=["vivek","Rohit","Nitish","Mohit","Kartick","vivek","Rohit"]
+    function name(usernames) {
+        let s=usernames.map(user  => `<li>${user}</li>`).join('\n');
+       document.querySelector( 'ul').innerHTML=s;
+
+    }
+    name(users)
+
+    let btnGet =document.querySelector('button');
+    btnGet.addEventListener('click',()=>{
+        usernames=users.filter((user,index)=> users.indexOf(user)!== index)
+        name(usernames)
+    })
+
+    // let users=["vivek"]
+//  function addUsers(usernames) {
+//     let template = users.map(user=> 
+//     "<li>${user}</li>").join('\n');
+//     document.querySelector('ul').innerHTML = template
+// }
+// addUsers(users)
+
+// let b= users.map(ele  =>
+//       '<li> ${ele} </li>').join('\n')
+
+// console.log(b)
+
+// b=users.map((e)=>{
+// return ("<li>${user}</li>").join('\n');
+//     document.querySelector('ul').innerHTML = b
+
+// })
+// console.log(b)
+
+
+var  string="t"
+if(string=="a"||string=="e"||string=="i"||string=="o"||string=="u"){
+    console.log(string + " is vowel")
+}
+else{
+    console.log(string +" is not vowel ")
+
+
+
+
+
+}
+
+
+function table(w) {
+    for(i=1;i<10;i++){
+        res=i*w
+        console.log(`${w}*${i}=${res}`)
+    }
+}
+table(2)
+
+
+
+
+
+</script>
+
+</body>
+</html>

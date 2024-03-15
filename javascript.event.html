@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>HTML EVENTS</h1>
+    <select onchange="changeColor(this.value)">
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="Pink">Pink</option>
+        <option value="Green">Green</option>
+        <option value="Orange">Orange</option>
+        <option value="Black">Black</option>
+        <option value="blue">Blue</option>
+    </select>
+    <button onclick="alert('call onclick event')">click me</button>
+
+    <script>
+
+        function changeColor(color) {
+            document.getElementById('body').style.background=color
+        }
+    </script>
+</body>
+</html>
